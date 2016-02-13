@@ -27,14 +27,14 @@ Have fun!
 AppStore;
 https://itunes.apple.com/us/app/summing/id441094794?mt=8
 
-=====
+---
+
 ####Original version info.
 
 ####Summing
 #####OS: Palm OS
 #####Author: Yoshitaka Nagano
 #####URL: http://www.freewarepalm.com/games/summing.shtml
-=====
 
 ---
 
