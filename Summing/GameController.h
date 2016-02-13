@@ -13,17 +13,19 @@
 @class GameViewController;
 @class CellButton;
 @class NextItemButton;
+@class SummingAppDelegate;
 
 @interface GameController : NSObject {
     
 @private
-    GameViewController *_viewController;
     NSInteger _score;
     NSMutableArray *_cells;
     NSMutableDictionary *_nextItems;
     CAKeyframeAnimation *_popAnimation;
     SystemSoundID _tapSoundID;
     SystemSoundID _clapSoundID;
+    GameViewController *_viewController;
+    SummingAppDelegate *_appDelegate;
 }
 
 @property (nonatomic, retain) IBOutlet GameViewController *viewController;

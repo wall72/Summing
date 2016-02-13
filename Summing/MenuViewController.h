@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <GameKit/GameKit.h>
 #import <iAd/iAd.h>
+#import "CaulyViewController.h"
 
-@interface MenuViewController : UIViewController <GKLeaderboardViewControllerDelegate, ADBannerViewDelegate> {
+@class SummingAppDelegate;
+
+@interface MenuViewController : UIViewController <GKLeaderboardViewControllerDelegate, ADBannerViewDelegate, CaulyProtocol> {
 
 @private
     UISwitch *_musicSwitch;
@@ -18,6 +21,7 @@
     UIButton *_newGameButton;
     UIView *_howOverlay;
     BOOL _isBannerVisible;
+    SummingAppDelegate *_appDelegate;
 }
 
 @property (nonatomic, retain) IBOutlet UISwitch *musicSwitch;

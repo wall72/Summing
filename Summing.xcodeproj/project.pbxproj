@@ -40,12 +40,22 @@
 		4642D03713894386008D7839 /* howtoplay_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4642D03613894386008D7839 /* howtoplay_button.png */; };
 		464541CC138DC42500921557 /* howtoplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 464541CB138DC42500921557 /* howtoplay.png */; };
 		464541D1138DC69C00921557 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 464541D0138DC69C00921557 /* arrow.png */; };
+		469147D613A259830092B63B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469147D513A259830092B63B /* CFNetwork.framework */; };
 		4695BEA01383F45000836B68 /* NextItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4695BE9F1383F45000836B68 /* NextItemButton.m */; };
 		550473C8138A6ECB000C6847 /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550473C6138A6ECB000C6847 /* ScoresViewController.m */; };
 		550473C9138A6ECB000C6847 /* ScoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550473C7138A6ECB000C6847 /* ScoresViewController.xib */; };
 		550473CE138A798D000C6847 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550473CC138A798D000C6847 /* AVFoundation.framework */; };
 		550473D0138A79AA000C6847 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550473CF138A79AA000C6847 /* AudioToolbox.framework */; };
 		556DAE91138B99B600F676AE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 556DAE90138B99B600F676AE /* Settings.bundle */; };
+		559724D613A0F10D00348E51 /* libCaulyDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 559724CF13A0F10D00348E51 /* libCaulyDevice.a */; };
+		559724D713A0F10D00348E51 /* libCaulySimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 559724D013A0F10D00348E51 /* libCaulySimulator.a */; };
+		559724D813A0F10D00348E51 /* cauly_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 559724D213A0F10D00348E51 /* cauly_default.png */; };
+		559724D913A0F10D00348E51 /* cauly_default_banner_ipad_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 559724D313A0F10D00348E51 /* cauly_default_banner_ipad_large.png */; };
+		559724DA13A0F10D00348E51 /* cauly_default_banner_ipad_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 559724D413A0F10D00348E51 /* cauly_default_banner_ipad_small.png */; };
+		559724DB13A0F10D00348E51 /* cauly_default_banner_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 559724D513A0F10D00348E51 /* cauly_default_banner_iphone.png */; };
+		559724DF13A0F13800348E51 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559724DC13A0F13800348E51 /* CoreLocation.framework */; };
+		559724E013A0F13800348E51 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559724DD13A0F13800348E51 /* MapKit.framework */; };
+		559724E113A0F13800348E51 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559724DE13A0F13800348E51 /* SystemConfiguration.framework */; };
 		55A5463013828D6500EEFDCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5462F13828D6500EEFDCD /* UIKit.framework */; };
 		55A5463213828D6500EEFDCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5463113828D6500EEFDCD /* Foundation.framework */; };
 		55A5463413828D6500EEFDCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5463313828D6500EEFDCD /* CoreGraphics.framework */; };
@@ -101,6 +111,7 @@
 		4642D03613894386008D7839 /* howtoplay_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howtoplay_button.png; sourceTree = "<group>"; };
 		464541CB138DC42500921557 /* howtoplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howtoplay.png; sourceTree = "<group>"; };
 		464541D0138DC69C00921557 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		469147D513A259830092B63B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4695BE9E1383F45000836B68 /* NextItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NextItemButton.h; path = ../../../Projects/Summing/Summing/NextItemButton.h; sourceTree = "<group>"; };
 		4695BE9F1383F45000836B68 /* NextItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NextItemButton.m; path = ../../../Projects/Summing/Summing/NextItemButton.m; sourceTree = "<group>"; };
 		550473C5138A6ECB000C6847 /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoresViewController.h; path = ../../Summing/Summing/ScoresViewController.h; sourceTree = "<group>"; };
@@ -109,6 +120,17 @@
 		550473CC138A798D000C6847 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		550473CF138A79AA000C6847 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		556DAE90138B99B600F676AE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../../Summing/Summing/Settings.bundle; sourceTree = "<group>"; };
+		559724CD13A0F10D00348E51 /* CaulyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyProtocol.h; sourceTree = "<group>"; };
+		559724CE13A0F10D00348E51 /* CaulyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyViewController.h; sourceTree = "<group>"; };
+		559724CF13A0F10D00348E51 /* libCaulyDevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaulyDevice.a; sourceTree = "<group>"; };
+		559724D013A0F10D00348E51 /* libCaulySimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaulySimulator.a; sourceTree = "<group>"; };
+		559724D213A0F10D00348E51 /* cauly_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default.png; sourceTree = "<group>"; };
+		559724D313A0F10D00348E51 /* cauly_default_banner_ipad_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_ipad_large.png; sourceTree = "<group>"; };
+		559724D413A0F10D00348E51 /* cauly_default_banner_ipad_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_ipad_small.png; sourceTree = "<group>"; };
+		559724D513A0F10D00348E51 /* cauly_default_banner_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_iphone.png; sourceTree = "<group>"; };
+		559724DC13A0F13800348E51 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		559724DD13A0F13800348E51 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		559724DE13A0F13800348E51 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		55A5462B13828D6500EEFDCD /* Summing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Summing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A5462F13828D6500EEFDCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		55A5463113828D6500EEFDCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -139,6 +161,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469147D613A259830092B63B /* CFNetwork.framework in Frameworks */,
+				559724DF13A0F13800348E51 /* CoreLocation.framework in Frameworks */,
+				559724E013A0F13800348E51 /* MapKit.framework in Frameworks */,
+				559724E113A0F13800348E51 /* SystemConfiguration.framework in Frameworks */,
 				550473D0138A79AA000C6847 /* AudioToolbox.framework in Frameworks */,
 				550473CE138A798D000C6847 /* AVFoundation.framework in Frameworks */,
 				4642D0081389305C008D7839 /* QuartzCore.framework in Frameworks */,
@@ -147,6 +173,8 @@
 				55A5463013828D6500EEFDCD /* UIKit.framework in Frameworks */,
 				55A5463213828D6500EEFDCD /* Foundation.framework in Frameworks */,
 				55A5463413828D6500EEFDCD /* CoreGraphics.framework in Frameworks */,
+				559724D613A0F10D00348E51 /* libCaulyDevice.a in Frameworks */,
+				559724D713A0F10D00348E51 /* libCaulySimulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,10 +219,34 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		559724CC13A0F10D00348E51 /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				559724CD13A0F10D00348E51 /* CaulyProtocol.h */,
+				559724CE13A0F10D00348E51 /* CaulyViewController.h */,
+				559724CF13A0F10D00348E51 /* libCaulyDevice.a */,
+				559724D013A0F10D00348E51 /* libCaulySimulator.a */,
+				559724D113A0F10D00348E51 /* Resources */,
+			);
+			path = Include;
+			sourceTree = "<group>";
+		};
+		559724D113A0F10D00348E51 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				559724D213A0F10D00348E51 /* cauly_default.png */,
+				559724D313A0F10D00348E51 /* cauly_default_banner_ipad_large.png */,
+				559724D413A0F10D00348E51 /* cauly_default_banner_ipad_small.png */,
+				559724D513A0F10D00348E51 /* cauly_default_banner_iphone.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		55A5462013828D6500EEFDCD = {
 			isa = PBXGroup;
 			children = (
 				55A5463513828D6500EEFDCD /* Summing */,
+				559724CC13A0F10D00348E51 /* Include */,
 				55A5462E13828D6500EEFDCD /* Frameworks */,
 				55A5462C13828D6500EEFDCD /* Products */,
 			);
@@ -219,6 +271,10 @@
 				550473CF138A79AA000C6847 /* AudioToolbox.framework */,
 				460700DC1388C9270037E83B /* GameKit.framework */,
 				55A546861382904100EEFDCD /* iAd.framework */,
+				559724DC13A0F13800348E51 /* CoreLocation.framework */,
+				559724DD13A0F13800348E51 /* MapKit.framework */,
+				559724DE13A0F13800348E51 /* SystemConfiguration.framework */,
+				469147D513A259830092B63B /* CFNetwork.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -363,6 +419,10 @@
 				55D8A0EE138CCC6F00997AA5 /* back_game.png in Resources */,
 				464541CC138DC42500921557 /* howtoplay.png in Resources */,
 				464541D1138DC69C00921557 /* arrow.png in Resources */,
+				559724D813A0F10D00348E51 /* cauly_default.png in Resources */,
+				559724D913A0F10D00348E51 /* cauly_default_banner_ipad_large.png in Resources */,
+				559724DA13A0F10D00348E51 /* cauly_default_banner_ipad_small.png in Resources */,
+				559724DB13A0F10D00348E51 /* cauly_default_banner_iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +517,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Summing/Summing-Prefix.pch";
 				INFOPLIST_FILE = "Summing/Summing-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Include\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -470,6 +534,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Summing/Summing-Prefix.pch";
 				INFOPLIST_FILE = "Summing/Summing-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Include\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

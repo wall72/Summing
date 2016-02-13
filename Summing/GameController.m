@@ -48,13 +48,16 @@
     // 사운드 파일 세팅 (박수)
     NSURL *_clapSoundURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"clap_sound" ofType:@"aif"]];
     AudioServicesCreateSystemSoundID((CFURLRef)_clapSoundURL, &_clapSoundID);
+
+    _appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)dealloc {
-    [_viewController release];
     [_cells release];
     [_nextItems release];
     [_popAnimation release];
+    [_viewController release];
+    [_appDelegate release];
     [super dealloc];
 }
 
@@ -70,7 +73,7 @@
         
         [_cell setValue:_nextItem.value];
         
-        NSString *_valueStr = [NSString stringWithFormat:@"n%d.png", _nextItem.value];
+        NSString *_valueStr = [NSString stringWithFormat:@"n%d", _nextItem.value];
         [_cell setBackgroundImage:[UIImage imageNamed:_valueStr] forState:UIControlStateNormal];
         
         [_cell setUserInteractionEnabled:NO];
@@ -94,8 +97,6 @@
 
 - (void)startGame {
     NSLog(@"call");
-    
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
     
     if ([_appDelegate isResume]) {
         _score = [_appDelegate.saveScore intValue];
@@ -139,9 +140,8 @@
 }
 
 - (void)initializeBoard {
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
     for (CellButton *_cell in _cells) {
+
         if ([self isEdged:_cell.tag]) {
             // 공백
             [_cell setValue:0];
@@ -157,7 +157,7 @@
             
             [_cell setValue:_value];
             
-            NSString *_valueStr = [NSString stringWithFormat:@"n%d.png", _value];
+            NSString *_valueStr = [NSString stringWithFormat:@"n%d", _value];
             [_cell setBackgroundImage:[UIImage imageNamed:_valueStr] forState:UIControlStateNormal];
 
             [_cell setUserInteractionEnabled:NO];
@@ -177,8 +177,6 @@
 }
 
 - (void)resumeBoard {
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
     for (CellButton *_cell in _cells) {
         [_cell setValue:[[_appDelegate.saveValueList objectForKey:[NSString stringWithFormat:@"%d", _cell.tag]] intValue]];
         [_cell setAssigned:[[_appDelegate.saveAssignList objectForKey:[NSString stringWithFormat:@"%d", _cell.tag]] boolValue]];
@@ -192,7 +190,7 @@
             [_cell setAssigned:NO];
         } else {
             // 저장된 수로 세팅
-            NSString *_valueStr = [NSString stringWithFormat:@"n%d.png", _cell.value];
+            NSString *_valueStr = [NSString stringWithFormat:@"n%d", _cell.value];
             [_cell setBackgroundImage:[UIImage imageNamed:_valueStr] forState:UIControlStateNormal];
             
             [_cell setUserInteractionEnabled:NO];
@@ -229,8 +227,6 @@
 }
 
 - (void)initializeNextBoard {
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
-
     NSEnumerator *_enumerator = [_nextItems objectEnumerator];
     NextItemButton *_nextItem;
     
@@ -240,7 +236,7 @@
         
         [_nextItem setValue:_value];
         
-        NSString *_valueStr = [NSString stringWithFormat:@"n%d.png", _value];
+        NSString *_valueStr = [NSString stringWithFormat:@"n%d", _value];
         [_nextItem setBackgroundImage:[UIImage imageNamed:_valueStr] forState:UIControlStateNormal];
 
         [_appDelegate.saveNextList setObject:[NSString stringWithFormat:@"%d", _nextItem.value] forKey:[NSString stringWithFormat:@"%d", _nextItem.tag]];
@@ -248,8 +244,6 @@
 }
 
 - (void)resumeNextBoard {
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
     NSEnumerator *_enumerator = [_nextItems objectEnumerator];
     NextItemButton *_nextItem;
     
@@ -257,7 +251,7 @@
         [_nextItem setValue:[[_appDelegate.saveNextList objectForKey:[NSString stringWithFormat:@"%d", _nextItem.tag]] intValue]];
         
         // 저장된 수로 세팅
-        NSString *_valueStr = [NSString stringWithFormat:@"n%d.png", _nextItem.value];
+        NSString *_valueStr = [NSString stringWithFormat:@"n%d", _nextItem.value];
         [_nextItem setBackgroundImage:[UIImage imageNamed:_valueStr] forState:UIControlStateNormal];
     }
 }
@@ -275,10 +269,9 @@
     int _value = arc4random() % 10;
     [_nextItem setValue:_value];
     
-    NSString *_valueStr = [NSString stringWithFormat:@"n%d.png", _value];
+    NSString *_valueStr = [NSString stringWithFormat:@"n%d", _value];
     [_nextItem setBackgroundImage:[UIImage imageNamed:_valueStr] forState:UIControlStateNormal];
 
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
     [_appDelegate.saveNextList setObject:[NSString stringWithFormat:@"%d", _nextItem.value] forKey:[NSString stringWithFormat:@"%d", _nextItem.tag]];
 }
 
@@ -288,16 +281,13 @@
     
     [_nextItemTgt setValue:_nextItemSrc.value];
     
-    NSString *_valueStr = [NSString stringWithFormat:@"n%d.png", _nextItemSrc.value];
+    NSString *_valueStr = [NSString stringWithFormat:@"n%d", _nextItemSrc.value];
     [_nextItemTgt setBackgroundImage:[UIImage imageNamed:_valueStr] forState:UIControlStateNormal];
 
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
     [_appDelegate.saveNextList setObject:[NSString stringWithFormat:@"%d", _nextItemSrc.value] forKey:[NSString stringWithFormat:@"%d", _nextItemTgt.tag]];
 }
 
 - (void)checkMatch:(NSInteger)tagNum {
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
-
     NSMutableArray *_octet = [NSMutableArray arrayWithObjects:[NSNumber numberWithInt:tagNum - 9 - 1], [NSNumber numberWithInt:tagNum - 9], [NSNumber numberWithInt:tagNum - 9 + 1], [NSNumber numberWithInt:tagNum - 1], [NSNumber numberWithInt:tagNum + 1], [NSNumber numberWithInt:tagNum + 9 - 1], [NSNumber numberWithInt:tagNum + 9], [NSNumber numberWithInt:tagNum + 9 + 1], nil];
     
     NSMutableArray *_octetTgt = [NSMutableArray array];
@@ -417,7 +407,6 @@
     }
     
     // complete
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
     [_appDelegate addHighScore:_score];
     
     [self setResume:NO];
@@ -429,13 +418,10 @@
     NSString *_scoreText = [NSString stringWithFormat:@"%d turns", scoreInt];
     self.viewController.scoreLabel.text = _scoreText;
 
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
     [_appDelegate setSaveScore:[NSString stringWithFormat:@"%d", scoreInt]];
 }
 
 - (void)setResume:(BOOL)flag {
-    SummingAppDelegate *_appDelegate = (SummingAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
     if (flag == YES) {
         if (![_appDelegate isResume]) {
             [_appDelegate setResume:YES];

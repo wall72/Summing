@@ -16,7 +16,7 @@
                BlueprintIdentifier = "55A5462A13828D6500EEFDCD"
                BuildableName = "Summing.app"
                BlueprintName = "Summing"
-               ReferencedContainer = "container:SUMMING.XCODEPROJ">
+               ReferencedContainer = "container:Summing.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,14 +36,14 @@
       displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release">
+      buildConfiguration = "Debug">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55A5462A13828D6500EEFDCD"
             BuildableName = "Summing.app"
             BlueprintName = "Summing"
-            ReferencedContainer = "container:SUMMING.XCODEPROJ">
+            ReferencedContainer = "container:Summing.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -62,7 +62,7 @@
             BlueprintIdentifier = "55A5462A13828D6500EEFDCD"
             BuildableName = "Summing.app"
             BlueprintName = "Summing"
-            ReferencedContainer = "container:SUMMING.XCODEPROJ">
+            ReferencedContainer = "container:Summing.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
