@@ -1,4 +1,4 @@
-### Summing
+# Summing
 
 #### Repository Info.
 * Simple iOS Game~
