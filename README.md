@@ -1,12 +1,12 @@
 # Summing
 
-#### Repository Info.
+### Repository Info.
 * Simple iOS Game~
 * I made this game just four hours in 2011.
 * old style objective-C sources
 * no ARC, support iOS 4.2
 
-#### Game Info.
+### Game Info.
 * Improve your brain power with Summing!
 
 #### [Description]
@@ -24,12 +24,12 @@
 4. If the newly placed cells'8 (or fewer) neightbors sum to the placed cell modulaus 10 (i.e., ignore the 10's dight), then all of them are removed.
 ```
 
-##### [AppStore]
+#### [AppStore]
 * Link : [Summing](https://itunes.apple.com/us/app/summing/id441094794?mt=8)
 
 ---
 
-#### Original version info.
+### Original version info.
 * Summing
 * OS: Palm OS
 * Author: Yoshitaka Nagano
